@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">Home | MacTime</title>
+    <link
+      rel="shortcut icon"
+      href="https://macweb-beta.github.io/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/mactime/" class="logo">
+        <img src="mactime-logo.png" alt="MacTime Logo" />
+      </a>
+      <a href="calendar.html" class="link">Calendar</a>
+      <a href="timer.html" class="link">Timer</a>
+      <a href="stopwatch.html" class="link">Stopwatch</a>
+      <a href="focus.html" class="link">Focus</a>
+    </nav>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <div class="wrap">
+      <div class="time">
+        <div id="hour" class="digit"></div>
+        :
+        <div id="minute" class="digit"></div>
+        :
+        <div id="second" class="digit"></div>
+        <div id="half" class="digit"></div>
+      </div>
+      <div class="date">
+        <div id="day"></div>
+        ,
+        <div id="month"></div>
+        /
+        <div id="date"></div>
+        /
+        <div id="year"></div>
+      </div>
+      <div class="info">
+        <!--
+        <div class="sun">
+          <div class="rise">
+            <img src="sun-solid.svg" alt="" />
+            7:26 am
+          </div>
+          <div class="set">
+            <img src="moon-solid.svg" alt="" />
+            5:06 pm
+          </div>
+        </div>
+        <div class="sep">|</div>
+      -->
+        <div id="zone">Time zones coming soon</div>
+        <div class="sep">|</div>
+        <div id="zone">Customization coming soon</div>
+      </div>
+    </div>
+  </body>
+</html>

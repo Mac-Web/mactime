@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(40, 40, 40);
+}
+
+.movingbar {
+  transform: translateX(0px) !important;
+}
+
+.macsidebar {
+  position: absolute;
+  top: 9vh;
+  left: 3px;
+  transform: translateX(-120%);
+  transition: transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding-inline: 8px;
+  height: 90vh;
+  z-index: 10000000;
+  border-radius: 15px;
+  padding-block: 10px;
+  overflow: auto;
+}
+
+.macsidebar img {
+  width: 38px;
+  margin-top: 2px;
+}
+
+.macsidebar a {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.macsidebar a:hover {
+  transform: scale(1.2);
+}
+
+.nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.link {
+  padding-block: 12px;
+  padding-inline: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  color: white;
+  border-bottom: 2px solid black;
+  transition: border-bottom 0.3s;
+}
+
+.link::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  margin: 0;
+  background-color: gold;
+  transition: width 0.15s ease;
+}
+
+.link:hover::after {
+  width: 80%;
+  background-color: gold;
+  transition: width 0.2s ease;
+}
+
+.logo {
+  margin-inline: 35px;
+  height: 32px;
+}
+
+.logo img {
+  height: 32px;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 46.67px);
+}
+
+.time {
+  padding-bottom: 50px;
+  font-size: 75px;
+}
+
+.tools {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tool {
+  background-color: black;
+  padding-block: 15px;
+  font-size: 20px;
+  width: 45%;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.tool:hover {
+  background-color: rgb(20, 20, 20);
+}
+
+.wrap {
+  width: 100%;
+  height: calc(100vh - 55px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  background-color: rgb(50, 50, 50);
+}
+
+.table th {
+  font-size: 20px;
+  padding-block: 15px;
+  width: calc(96% / 7);
+  background-color: rgb(60, 60, 60);
+  border: 0;
+  margin: 0;
+}
+
+thead th {
+  position: sticky;
+  top: 51px;
+  z-index: 1000;
+}
+
+tr th:first-child {
+  width: 4%;
+  font-size: 15px;
+  padding-block: 10px;
+  text-align: right;
+  padding-right: 5px;
+}
+
+.table td {
+  font-size: 18px;
+  text-align: center;
+  padding-block: 10px;
+  background-color: rgb(50, 50, 50);
+}
+
+.time,
+.date {
+  color: white;
+  display: flex;
+  font-size: 40px;
+  font-weight: bold;
+  margin-block: 10px;
+}
+
+.time {
+  font-size: 150px;
+  text-shadow: 0px 0px 15px gray;
+}
+
+.digit {
+  width: 160px;
+  text-shadow: 0px 0px 15px gray;
+}
+
+.tip {
+  color: white;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+#minutes, #seconds, #mili {
+  width: 165px;
+}
+
+#half {
+  font-size: 90px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+#month {
+  margin-left: 5px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.sun,
+#zone,
+.sep {
+  display: flex;
+  color: rgb(224, 224, 224);
+  font-size: 18px;
+  justify-content: center;
+}
+
+.rise {
+  margin-right: 15px;
+}
+
+.sep {
+  width: auto;
+  margin-inline: 20px;
+  font-size: 28px;
+}
+
+@media (max-width: 800px) {
+  .time {
+    font-size: 70px;
+  }
+
+  .digit {
+    width: 70px;
+  }
+
+  #half {
+    font-size: 45px;
+  }
+}
+/*
+td:hover {
+  background-color: rgb(30, 30, 30);
+  border-radius: 10px !important;
+}
+*/
