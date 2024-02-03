@@ -1,0 +1,102 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const wrap = document.getElementById("wrap");
+  const bar = document.getElementById("sidebar");
+  const close = document.getElementById("closea");
+  close.addEventListener("click", function () {
+    close.parentElement.parentElement.style.display = "none";
+    localStorage.setItem("mactimeclose","closed");
+  })
+  document.addEventListener("mousemove", function (event) {
+    if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {
+      bar.classList.add("movingbar");
+    }
+  });
+
+  document.addEventListener("click", function () {
+    bar.classList.remove("movingbar");
+  })
+
+  wrap.addEventListener("click", function () {
+    console.log("sl");
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let start = document.getElementById("start");
+  let hours = document.getElementById("hours");
+  let minutes = document.getElementById("minutes");
+  let hour = document.getElementById("hour");
+  let minute = document.getElementById("minute");
+  let line = document.getElementById("line");
+  let main;
+  let h = hours.value.toString();
+  let m = minutes.value.toString();
+  let percent = 1;
+  start.addEventListener("mouseup", function starting() {
+    if (start.innerHTML === "Start") {
+      if (hours.value === "0" && minutes.value === "0") {
+        alert("Click on the digits to select a time and start the timer!");
+      } else {
+        percent = 1;
+        line.style.transform = "scaleX(1)";
+        start.innerHTML = "End";
+        hours.style.display = "none";
+        minutes.style.display = "none";
+        hour.style.display = "block";
+        minute.style.display = "block";
+        if (hours.value.length === 1) {
+          hour.innerHTML = "0" + hours.value.toString();
+        } else {
+          hour.innerHTML = hours.value.toString();
+        }
+        if (minutes.value.length === 1) {
+          minute.innerHTML = "0" + minutes.value.toString();
+        } else {
+          minute.innerHTML = minutes.value.toString();
+        }
+        main = setInterval(update, 1000);
+      }
+    } else if (start.innerHTML === "End") {
+      line.style.transform = "scaleX(1)";
+      clearInterval(main);
+      hour.style.display = "none";
+      minute.style.display = "none";
+      hours.style.display = "block";
+      minutes.style.display = "block";
+      start.innerHTML = "Start";
+    }
+  });
+
+  function update() {
+    h = Number(hours.value);
+    m = Number(minutes.value);
+    let total = (h * 60) + m;
+    percent -= 1 / total;
+    line.style.transform = `scaleX(${percent})`;
+    let thing = Number(minute.innerHTML);
+    let things = Number(hour.innerHTML);
+    if (thing === 0) {
+      thing = 60;
+      things--;
+      if (things <= 9) {
+        hour.innerHTML = "0" + things.toString();
+      } else {
+        hour.innerHTML = things.toString();
+      }
+    }
+    thing--;
+    if (thing <= 9) {
+      if (thing === 0) {
+        minute.innerHTML = "00";
+        if (things === 0) {
+          clearInterval(main);
+        }
+      } else {
+        minute.innerHTML = "0" + thing.toString();
+      }
+    } else {
+      minute.innerHTML = thing.toString();
+    }
+  }
+});

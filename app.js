@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const wrap = document.getElementById("wrap");
   const bar = document.getElementById("sidebar");
+  const close = document.getElementById("closea");
+  close.addEventListener("click", function () {
+    close.parentElement.parentElement.style.display = "none";
+    localStorage.setItem("mactimeclose","closed");
+  })
   document.addEventListener("mousemove", function (event) {
     if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {
       bar.classList.add("movingbar");
@@ -9,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("click", function () {
     bar.classList.remove("movingbar");
-  });
+  })
 
   wrap.addEventListener("click", function () {
     console.log("sl");
@@ -40,7 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
       hour.innerHTML = "0" + hours.toString();
     } else if (hours >= 13) {
       let thing = hours - 12;
-      hour.innerHTML = "0" + thing.toString();
+      if (thing<10) {
+
+        hour.innerHTML = "0" + thing.toString();
+      } else {
+        
+      hour.innerHTML = thing.toString();
+      }
     } else {
         hour.innerHTML = hours.toString();
     }

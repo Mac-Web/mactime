@@ -3,12 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timer | MacTime</title>
-    <link rel="icon" type="image/x-icon" href="/logo.png" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
+    <title id="title">Timer | MacTime</title>
+    <link
+      rel="shortcut icon"
+      href="https://macweb-beta.github.io/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="timer.css" />
+    <script src="timer.js"></script>
   </head>
   <body>
+    <div class="announce">
+      <h2>
+        The 
+        <a href="/macblog/updates/mactime/2024/february.html" target="_blank"
+          >MacTime v.0.6 February Update</a
+        > is here 🕒!
+        <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
+      </h2>
+    </div>
+    <script>
+      let clos = document.getElementById("closea");
+      if (localStorage.getItem("mactimeclose")) {
+        clos.parentElement.parentElement.style.display = "none";
+      }
+    </script>
     <nav class="nav">
       <a href="/mactime/" class="logo">
         <img src="mactime-logo.png" alt="MacTime Logo" />
@@ -17,6 +36,18 @@
       <a href="timer.html" class="link">Timer</a>
       <a href="stopwatch.html" class="link">Stopwatch</a>
       <a href="focus.html" class="link">Focus</a>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/mactime/">About</a>
+          <a href="/macblog/updates/mactime/">Updates</a>
+          <a href="/macblog/projects/mactime/">Docs</a>
+
+          <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
     </nav>
     <div class="macsidebar" id="sidebar">
       <a href="/"><img src="/logo.png" alt="" /></a>
@@ -25,10 +56,43 @@
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
-    <div class="main">
-      <h1 style="color: white; text-shadow: 0px 0px 15px gray">
-        MacTime Timer coming soon!
-      </h1>
+    <div class="wrap">
+      <div class="time" style="display: flex; align-items: center">
+        <div id="hour"></div>
+        <select name="hours" id="hours">
+          <option value="0">00</option>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+          <option value="6">06</option>
+          <option value="7">07</option>
+          <option value="8">08</option>
+          <option value="9">09</option>
+          <option value="10">10</option>
+        </select><span class="pos">m</span>
+        :
+        <div id="minute"></div>
+        <select name="minutes" id="minutes">
+          <option value="0">00</option>
+          <option value="5">05</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+        </select><span class="pos">s</span>
+      </div>
+      <div class="lcontain">
+        <div id="line"></div>        
+      </div>
+      <button id="start">Start</button>
     </div>
   </body>
 </html>

@@ -14,6 +14,21 @@
     <script src="app.js"></script>
   </head>
   <body>
+    <div class="announce">
+      <h2>
+        The 
+        <a href="/macblog/updates/mactime/2024/february.html" target="_blank"
+          >MacTime v.0.6 February Update</a
+        > is here 🕒!
+        <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
+      </h2>
+    </div>
+    <script>
+      let clos = document.getElementById("closea");
+      if (localStorage.getItem("mactimeclose")) {
+        clos.parentElement.parentElement.style.display = "none";
+      }
+    </script>
     <nav class="nav">
       <a href="/mactime/" class="logo">
         <img src="mactime-logo.png" alt="MacTime Logo" />
@@ -22,6 +37,18 @@
       <a href="timer.html" class="link">Timer</a>
       <a href="stopwatch.html" class="link">Stopwatch</a>
       <a href="focus.html" class="link">Focus</a>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/mactime/">About</a>
+          <a href="/macblog/updates/mactime/">Updates</a>
+          <a href="/macblog/projects/mactime/">Docs</a>
+
+          <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
     </nav>
     <div class="macsidebar" id="sidebar">
       <a href="/"><img src="/logo.png" alt="" /></a>
