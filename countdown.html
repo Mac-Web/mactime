@@ -2,19 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch | MacTime</title>
-    <link rel="icon" type="image/x-icon" href="/logo.png" />
+    <title class="title">Countdown | MacTime</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="stopwatch.js"></script>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <script src="countdown.js"></script>
   </head>
   <body>
     <div class="announce">
       <h2>
-        The 
+        The
         <a href="/macblog/updates/mactime/2024/march.html" target="_blank"
           >MacTime v.0.7 March Update</a
-        > is here 🕒!
+        >
+        is here 🕒!
         <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
       </h2>
     </div>
@@ -54,19 +56,34 @@
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
-    <div class="main">
-      <div class="time">
-        <span id="minutes">00</span>:<span id="seconds">00</span>:<span
-          id="mili"
-          >00</span
-        >
+    <div class="wrap">
+      <p class="debug">We use 30 days for month countdown and 365 for year countdown (except for leap years)</p>
+      <div class="inputs">
+        <input type="text" class="yearInput input" placeholder="Year" id="year" />
+        <input type="text" class="monthInput input" placeholder="Month" id="month"/>
+        <input type="text" class="dayInput input" placeholder="Day" id="day"/>
+        <input type="text" class="hourInput input" placeholder="Hour" id="hour"/>
+        <input type="text" class="minuteInput input" placeholder="Minute" id="minute"/>
+        <input type="text" class="secondInput input" placeholder="Second" id="second"/>
       </div>
-      <div class="tools">
-        <button class="tool" id="go">Start</button>
+      <div class="inputs wer placeholder" style="background-color: rgb(40, 40, 40);" id="placeholder">
+        <div class="result input">Year</div>
+        <div class="result input">Month</div>
+        <div class="result input">Day</div>
+        <div class="result input">Hour</div>
+        <div class="result input">Minute</div>
+        <div class="result input">Second</div>
       </div>
-      <div class="tip">
-        Tip: use the space bar to quickly start, pause, and reset.
+      <div class="inputs dks" id="results">
+        <div class="result input" id="ryear">NaN</div>
+        <div class="result input" id="rmonth">NaN</div>
+        <div class="result input" id="rday">NaN</div>
+        <div class="result input" id="rhour">NaN</div>
+        <div class="result input" id="rminute">NaN</div>
+        <div class="result input" id="rsecond">NaN</div>
       </div>
+      <h2 id="blub">Type the countdown date in the input field!</h2>
+      <button class="btn" id="btn">Go!</button>
     </div>
   </body>
 </html>

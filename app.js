@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const close = document.getElementById("closea");
   close.addEventListener("click", function () {
     close.parentElement.parentElement.style.display = "none";
-    localStorage.setItem("mactimeclose","closed");
+    localStorage.setItem("mactimeclosee","closed");
   })
   document.addEventListener("mousemove", function (event) {
     if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {

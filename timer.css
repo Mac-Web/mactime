@@ -10,6 +10,12 @@ body {
   background-color: rgb(40, 40, 40);
 }
 
+.header {
+  color: white;
+  font-size: 35px;
+  text-shadow: 0px 0px 15px gray;
+}
+
 
 .select {
   background-color: black;
@@ -70,13 +76,13 @@ body {
   transform: translateX(-50%);
   width: 0px;
   margin: 0;
-  background-color: gold;
+  background-color: rgb(35, 130, 37);
   transition: width 0.15s ease;
 }
 
 #cats a:hover::after {
   width: 50%;
-  background-color: gold;
+  background-color: rgb(35, 130, 37);
   transition: width 0.2s ease;
 }
 
@@ -149,13 +155,13 @@ body {
   transform: translateX(-50%);
   width: 0px;
   margin: 0;
-  background-color: gold;
+  background-color: rgb(35, 130, 37);
   transition: width 0.15s ease;
 }
 
 .link:hover::after {
   width: 80%;
-  background-color: gold;
+  background-color: rgb(35, 130, 37);
   transition: width 0.2s ease;
 }
 
@@ -357,22 +363,24 @@ td:hover {
 }
 
 .lcontain {
-  height: 3px;
+  height: 4px;
   width: 300px;
   margin-bottom: 30px;
-  background-color: gray;
+  background-color: white;
   border-radius: 20px;
   display: flex;
-  justify-content: flex-start;
+  align-items: flex-start; /* Align items to the start */
 }
 
 #line {
-  height: 3px;
-  width: 100%;
-  border-radius: 5px;
+  height: 100%;
   transition: transform 0.2s ease;
-  background-color: white;
+  background-color: gray;
+  width: 100%;
+  border-radius: 10px;
+  transform-origin: 100% 0px;
 }
+
 
 
 .announce {

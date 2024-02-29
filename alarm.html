@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm | MacTime</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <script src="alarm.js"></script>
+  </head>
+  <body>
+    <div class="announce">
+      <h2>
+        The
+        <a href="/macblog/updates/mactime/2024/march.html" target="_blank"
+          >MacTime v.0.7 March Update</a
+        >
+        is here 🕒!
+        <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
+      </h2>
+    </div>
+    <script>
+      let clos = document.getElementById("closea");
+      if (localStorage.getItem("mactimeclosee")) {
+        clos.parentElement.parentElement.style.display = "none";
+      }
+    </script>
+    <nav class="nav">
+      <a href="/mactime/" class="logo">
+        <img src="mactime-logo.png" alt="MacTime Logo" />
+      </a>
+      <a href="calendar.html" class="link">Calendar</a>
+      <a href="timer.html" class="link">Timer</a>
+      <a href="stopwatch.html" class="link">Stopwatch</a>
+      <a href="countdown.html" class="link">Countdown</a>
+      <a href="alarm.html" class="link">Alarm</a>
+      <a href="focus.html" class="link">Focus</a>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/mactime/">About</a>
+          <a href="/macblog/updates/mactime/">Updates</a>
+          <a href="/macblog/projects/mactime/">Docs</a>
+
+          <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <div class="wrap">
+      <form class="digits">
+        <div class="alld">
+          <select name="hour" id="hour" class="selecta">
+            <option value="0">12 am</option>
+            <option value="1">01 am</option>
+            <option value="2">02 am</option>
+            <option value="3">03 am</option>
+            <option value="4">04 am</option>
+            <option value="5">05 am</option>
+            <option value="6">06 am</option>
+            <option value="7">07 am</option>
+            <option value="8">08 am</option>
+            <option value="9">09 am</option>
+            <option value="10">10 am</option>
+            <option value="11">11 am</option>
+            <option value="12">12 pm</option>
+            <option value="13">01 pm</option>
+            <option value="14">02 pm</option>
+            <option value="15">03 pm</option>
+            <option value="16">04 pm</option>
+            <option value="17">05 am</option>
+            <option value="18">06 am</option>
+            <option value="19">07 pm</option>
+            <option value="20">08 pm</option>
+            <option value="21">09 pm</option>
+            <option value="22">10 pm</option>
+            <option value="23">11 pm</option>
+          </select>
+          <select name="minute" id="minute" class="selecta">
+            <option value="0">00</option>
+            <option value="5">05</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+          </select>
+          <select name="second" id="second" class="selecta">
+            <option value="0">00</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+        <div class="labels">
+          <div class="label">Hour</div>
+          <div class="label">Minute</div>
+          <div class="label">Second</div>
+        </div>
+      </form>
+      <button class="btn" id="btn">Set Alarm</button>
+    </div>
+  </body>
+</html>

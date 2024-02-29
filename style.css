@@ -67,19 +67,196 @@ body {
   transform: translateX(-50%);
   width: 0px;
   margin: 0;
-  background-color: gold;
+  background-color: rgb(35, 130, 37);
   transition: width 0.15s ease;
 }
 
 #cats a:hover::after {
   width: 50%;
-  background-color: gold;
+  background-color: rgb(35, 130, 37);
   transition: width 0.2s ease;
 }
 
 
 .movingbar {
   transform: translateX(0px) !important;
+}
+
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 36%;
+  margin-inline: 32%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(30, 30, 30);
+  border-radius: 15px;
+  flex-direction: column;
+}
+
+.alld {
+  display: flex;
+  justify-content: space-between;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.placeholder {
+  visibility: hidden;
+  height: 0;
+  transition: height 0.5s ease;
+}
+
+.placeholderr {
+  visibility: visible;
+  height: 50px;
+}
+
+.debug {
+  color: white;
+  font-size: 18px;
+  padding-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+#blub {
+  transition: color 0.3s ease;
+}
+
+select,
+.label {
+  width: 28%;
+  padding-block: 12px;
+  color: white;
+  background-color: transparent;
+  font-size: 30px;
+  appearance: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.label {
+  font-size: 18px;
+  padding-block: 10px;
+}
+
+select:first-of-type {
+  border-radius: 15px 0px 0px 0px;
+}
+
+select:last-of-type {
+  border-radius: 0px 15px 0px 0px;
+}
+
+select:hover {
+  background-color: rgb(20, 20, 20);
+}
+
+option {
+  background-color: rgb(30, 30, 30);
+  font-size: 19px;
+}
+
+.btn {
+  width: 15%;
+  margin-inline: 42.5%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: rgb(30, 30, 30);
+  border-radius: 15px;
+  padding-block: 15px;
+  margin-top: 30px;
+  color: white;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.wer div {
+  font-size: 17px;
+  color: rgb(200, 200, 200);
+}
+
+.btn:hover {
+  background-color: rgb(20, 20, 20);
+}
+
+.btn:active {
+  background-color: rgb(10, 10, 10);
+}
+
+.inputs {
+  width: 70%;
+  margin-inline: 15%;
+  display: flex;
+  background-color: rgb(30, 30, 30);
+  border-radius: 15px;
+  justify-content: space-between;
+}
+
+.input {
+  width: 16%;
+  border: none;
+  display: block;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-block: 15px;
+}
+
+.dks {
+  height: 0;
+  visibility: hidden;
+  transition: height 0.3s ease;
+}
+
+#blub {
+  color: white;
+  margin-top: 30px;
+}
+
+.full {
+  height: 50px;
+}
+
+@media (max-width: 800px) {
+  .btn {
+    width: 60%;
+    margin-inline: 20%;
+    margin-top: 5px;
+    padding-block: 5px;
+  }
+
+  form {
+    width: 80%;
+    margin-inline: 10%;
+  }
+
+  select {
+    padding-block: 10px;
+  }
+
+  .inputs {
+    width: 95%;
+    margin-inline: 2.5%;
+  }
 }
 
 .macsidebar {
@@ -146,13 +323,13 @@ body {
   transform: translateX(-50%);
   width: 0px;
   margin: 0;
-  background-color: gold;
+  background-color: rgb(35, 130, 37);
   transition: width 0.15s ease;
 }
 
 .link:hover::after {
   width: 80%;
-  background-color: gold;
+  background-color: rgb(35, 130, 37);
   transition: width 0.2s ease;
 }
 

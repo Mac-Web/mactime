@@ -10,26 +10,25 @@
     <title id="title">Home | MacTime</title>
     <link
       rel="shortcut icon"
-      href="https://macweb-beta.github.io/logo.png"
+      href="/logo.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
   </head>
   <body>
-    
     <div class="announce">
       <h2>
         The 
-        <a href="/macblog/updates/mactime/2024/february.html" target="_blank"
-          >MacTime v.0.6 February Update</a
+        <a href="/macblog/updates/mactime/2024/march.html" target="_blank"
+          >MacTime v.0.7 March Update</a
         > is here 🕒!
         <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
       </h2>
     </div>
     <script>
       let clos = document.getElementById("closea");
-      if (localStorage.getItem("mactimeclose")) {
+      if (localStorage.getItem("mactimeclosee")) {
         clos.parentElement.parentElement.style.display = "none";
       }
     </script>
@@ -40,6 +39,8 @@
       <a href="calendar.html" class="link">Calendar</a>
       <a href="timer.html" class="link">Timer</a>
       <a href="stopwatch.html" class="link">Stopwatch</a>
+      <a href="countdown.html" class="link">Countdown</a>
+      <a href="alarm.html" class="link">Alarm</a>
       <a href="focus.html" class="link">Focus</a>
       <div class="select">
         <span id="header123">Help</span>

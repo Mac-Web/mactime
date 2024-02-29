@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const close = document.getElementById("closea");
   close.addEventListener("click", function () {
     close.parentElement.parentElement.style.display = "none";
-    localStorage.setItem("mactimeclose","closed");
-  })
+    localStorage.setItem("mactimeclosee", "closed");
+  });
   document.addEventListener("mousemove", function (event) {
     if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {
       bar.classList.add("movingbar");
@@ -14,13 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("click", function () {
     bar.classList.remove("movingbar");
-  })
+  });
 
   wrap.addEventListener("click", function () {
     console.log("sl");
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   let start = document.getElementById("start");
@@ -29,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let hour = document.getElementById("hour");
   let minute = document.getElementById("minute");
   let line = document.getElementById("line");
+  let audio = document.getElementById("notif");
   let main;
   let h = hours.value.toString();
   let m = minutes.value.toString();
@@ -65,14 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
       hours.style.display = "block";
       minutes.style.display = "block";
       start.innerHTML = "Start";
+      line.style.borderRadius = "10px";
     }
   });
 
   function update() {
     h = Number(hours.value);
     m = Number(minutes.value);
-    let total = (h * 60) + m;
+    let total = h * 60 + m;
     percent -= 1 / total;
+    line.style.borderRadius = "0px 10px 10px 0px";
     line.style.transform = `scaleX(${percent})`;
     let thing = Number(minute.innerHTML);
     let things = Number(hour.innerHTML);
@@ -91,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         minute.innerHTML = "00";
         if (things === 0) {
           clearInterval(main);
+          audio.play();
         }
       } else {
         minute.innerHTML = "0" + thing.toString();
