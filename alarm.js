@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       bar.classList.add("movingbar");
     }
   });
-//TODO: i am stupid
   document.addEventListener("click", function () {
     bar.classList.remove("movingbar");
   })

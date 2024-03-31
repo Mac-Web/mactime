@@ -2,11 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="UWHTkMxkkqv0hsUJcBHWc3ZjLXysHyydwRcO67gs_tk"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch | MacTime</title>
-    <link rel="icon" type="image/x-icon" href="/logo.png" />
+    <title id="title">Home | MacTime</title>
+    <link
+      rel="shortcut icon"
+      href="/logo.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
-    <script src="stopwatch.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -40,18 +48,41 @@
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
-    <div class="main">
+    <div class="wrap">
       <div class="time">
-        <span id="minutes">00</span>:<span id="seconds">00</span>:<span
-          id="mili"
-          >00</span
-        >
+        <div id="hour" class="digit"></div>
+        :
+        <div id="minute" class="digit"></div>
+        :
+        <div id="second" class="digit"></div>
+        <div id="half" class="digit"></div>
       </div>
-      <div class="tools">
-        <button class="tool" id="go">Start</button>
+      <div class="date">
+        <div id="day"></div>
+        ,
+        <div id="month"></div>
+        /
+        <div id="date"></div>
+        /
+        <div id="year"></div>
       </div>
-      <div class="tip">
-        Tip: use the space bar to quickly start, pause, and reset.
+      <div class="info">
+        <!--
+        <div class="sun">
+          <div class="rise">
+            <img src="sun-solid.svg" alt="" />
+            7:26 am
+          </div>
+          <div class="set">
+            <img src="moon-solid.svg" alt="" />
+            5:06 pm
+          </div>
+        </div>
+        <div class="sep">|</div>
+      -->
+        <div id="zone">Time zones coming soon</div>
+        <div class="sep">|</div>
+        <div id="zone">Customization coming soon</div>
       </div>
     </div>
   </body>

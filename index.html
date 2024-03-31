@@ -8,27 +8,25 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="title">Home | MacTime</title>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
   </head>
   <body>
     <div class="announce">
       <h2>
-        The 
-        <a href="/macblog/updates/mactime/2024/march.html" target="_blank"
-          >MacTime v.0.7 March Update</a
-        > is here 🕒!
+        The
+        <a href="/macblog/updates/mactime/2024/april.html" target="_blank"
+          >MacTime v.0.10 April Update</a
+        >
+        is here 🕒!
         <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
       </h2>
     </div>
     <script>
       let clos = document.getElementById("closea");
-      if (localStorage.getItem("mactimeclosee")) {
+      if (localStorage.getItem("mactimecloseee")) {
         clos.parentElement.parentElement.style.display = "none";
       }
     </script>
@@ -37,6 +35,7 @@
         <img src="mactime-logo.png" alt="MacTime Logo" />
       </a>
       <a href="calendar.html" class="link">Calendar</a>
+      <a href="world.html" class="link">World Clock</a>
       <a href="timer.html" class="link">Timer</a>
       <a href="stopwatch.html" class="link">Stopwatch</a>
       <a href="countdown.html" class="link">Countdown</a>
@@ -63,40 +62,122 @@
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <div class="wrap">
-      <div class="time">
-        <div id="hour" class="digit"></div>
-        :
-        <div id="minute" class="digit"></div>
-        :
-        <div id="second" class="digit"></div>
-        <div id="half" class="digit"></div>
+      <div class="panel" id="panel">
+        <iframe
+          src="clean/alarm.html"
+          frameborder="0"
+          class="frame"
+          id="alarmf"
+        ></iframe>
+        <iframe
+          src="clean/countdown.html"
+          frameborder="0"
+          class="frame"
+          id="countdownf"
+        ></iframe>
+        <iframe
+          src="clean/focus.html"
+          frameborder="0"
+          class="frame"
+          id="focusf"
+        ></iframe>
+        <iframe
+          src="clean/stopwatch.html"
+          frameborder="0"
+          class="frame"
+          id="stopwatchf"
+        ></iframe>
+        <iframe
+          src="clean/timer.html"
+          frameborder="0"
+          class="frame"
+          id="timerf"
+        ></iframe>
+        <iframe
+          src="clean/world.html"
+          frameborder="0"
+          class="frame"
+          id="worldf"
+        ></iframe>
       </div>
-      <div class="date">
-        <div id="day"></div>
-        ,
-        <div id="month"></div>
-        /
-        <div id="date"></div>
-        /
-        <div id="year"></div>
-      </div>
-      <div class="info">
-        <!--
-        <div class="sun">
-          <div class="rise">
-            <img src="sun-solid.svg" alt="" />
-            7:26 am
+      <div class="side">
+        <h3>Choose which widgests to pin to the home page!</h3>
+        <div class="boxes">
+          <div class="box">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="choose"
+              id="alarm"
+              value="alarm"
+            />
+            <label for="alarm">Alarm</label>
           </div>
-          <div class="set">
-            <img src="moon-solid.svg" alt="" />
-            5:06 pm
+          <div class="box">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="choose"
+              id="countdown"
+              value="countdown"
+            />
+            <label for="countdown">Countdown</label>
+          </div>
+          <div class="box">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="choose"
+              id="focus"
+              value="focus"
+              checked="true"
+            />
+            <label for="focus">Focus</label>
+          </div>
+          <div class="box">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="choose"
+              id="stopwatch"
+              value="stopwatch"
+            />
+            <label for="stopwatch">Stopwatch</label>
+          </div>
+          <div class="box">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="choose"
+              id="timer"
+              value="timer"
+              checked="true"
+            />
+            <label for="timer">Timer</label>
+          </div>
+          <div class="box">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="choose"
+              id="world"
+              value="world"
+              checked="true"
+            />
+            <label for="world">World Clock</label>
+          </div>
+          <div class="box">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="choose"
+              id="calendar"
+              value="calendar"
+              disabled
+            />
+            <label for="calendar">Calendar (coming soon)</label>
           </div>
         </div>
-        <div class="sep">|</div>
-      -->
-        <div id="zone">Time zones coming soon</div>
-        <div class="sep">|</div>
-        <div id="zone">Customization coming soon</div>
       </div>
     </div>
   </body>

@@ -13,26 +13,12 @@
     <script src="focus.js"></script>
   </head>
   <body>
-    <div class="announce">
-      <h2>
-        The 
-        <a href="/macblog/updates/mactime/2024/march.html" target="_blank"
-          >MacTime v.0.7 March Update</a
-        > is here 🕒!
-        <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
-      </h2>
-    </div>
-    <script>
-      let clos = document.getElementById("closea");
-      if (localStorage.getItem("mactimeclosee")) {
-        clos.parentElement.parentElement.style.display = "none";
-      }
-    </script>
     <nav class="nav">
       <a href="/mactime/" class="logo">
         <img src="mactime-logo.png" alt="MacTime Logo" />
       </a>
       <a href="calendar.html" class="link">Calendar</a>
+      <a href="world.html" class="link">World Clock</a>
       <a href="timer.html" class="link">Timer</a>
       <a href="stopwatch.html" class="link">Stopwatch</a>
       <a href="countdown.html" class="link">Countdown</a>
