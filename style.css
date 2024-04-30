@@ -301,7 +301,7 @@ option {
   top: 0;
 }
 
-.link {
+.link, .olink {
   padding-block: 12px;
   padding-inline: 20px;
   font-size: 18px;
@@ -314,7 +314,7 @@ option {
   transition: border-bottom 0.3s;
 }
 
-.link::after {
+.link::after, .olink::before {
   content: "";
   height: 2px;
   position: absolute;
@@ -331,6 +331,24 @@ option {
   width: 80%;
   background-color: rgb(35, 130, 37);
   transition: width 0.2s ease;
+}
+
+.olink {
+  transition: color 0.15s ease;
+  border-color: rgb(30, 30, 30);
+}
+
+.olink::before {
+  height: 0px;
+  transform: translateY(-50%);
+  width: 3px;
+  left: 0;
+  top: 50%;
+  transition: height 0.2s ease;
+}
+
+.olink:hover::before {
+  height: 80%;
 }
 
 .logo {
@@ -505,6 +523,13 @@ tr th:first-child {
   #half {
     font-size: 45px;
   }
+
+  .time span {
+    width: 100px !important;
+  }
+  .tool {
+    width: 90px;
+  }
 }
 /*
 td:hover {
@@ -545,4 +570,70 @@ td:hover {
 
 .announce a {
   color: white;
+}
+
+.overflowm {
+  display: none;
+  width: 40px;
+  padding: 10px;
+  height: 40px;
+  border-radius: 10px;
+  margin-inline: 25px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  transition: background-color 0.2s ease !important;
+}
+
+.overflowm:hover {
+  background-color: rgb(30, 30, 30);
+}
+
+.overflow-menu {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-50vw);
+  width: 50vw;
+  position: absolute;
+  padding-block: 20px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10000;
+  background-color: rgb(30, 30, 30);
+  transition: transform 0.3s ease !important;
+}
+
+.menu-slide {
+  transform: translateX(0px);
+  box-shadow: 0px 0px 10px rgb(30, 30, 30);
+}
+
+.secondselect {
+  display: none;
+}
+
+@media (width < 1000px) {
+  .link {
+    display: none;
+  }
+  .secondselect {
+    display: flex;
+  }
+}
+
+@media (width < 500px) {
+  .link, .select {
+    display: none;
+  }
+  .logo {
+    padding-block: 8px;
+    box-sizing: content-box;
+    margin: 0;
+  }
+  .overflowm {
+    display: flex;
+  }
 }

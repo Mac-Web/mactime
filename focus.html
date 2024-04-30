@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="title">Focus | MacTime</title>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="timer.css" />
     <script src="focus.js"></script>
   </head>
   <body>
+    <div class="overflow-menu shoot" id="overflow-menu">
+      <a href="calendar.html" class="olink">Calendar</a>
+      <a href="world.html" class="olink">World Clock</a>
+      <a href="timer.html" class="olink">Timer</a>
+      <a href="stopwatch.html" class="olink">Stopwatch</a>
+      <a href="countdown.html" class="olink">Countdown</a>
+      <a href="alarm.html" class="olink">Alarm</a>
+      <a href="focus.html" class="olink">Focus</a>
+    </div>
     <nav class="nav">
+      <div class="overflowm shoot" id="overflowm">
+        <img src="bars-solid.svg" alt="Menu" class="shoot">
+      </div>
       <a href="/mactime/" class="logo">
         <img src="mactime-logo.png" alt="MacTime Logo" />
       </a>
@@ -24,6 +32,18 @@
       <a href="countdown.html" class="link">Countdown</a>
       <a href="alarm.html" class="link">Alarm</a>
       <a href="focus.html" class="link">Focus</a>
+      <div class="select secondselect">
+        <span id="header123">Tabs</span>
+        <ul id="cats">
+          <a href="calendar.html">Calendar</a>
+          <a href="world.html">World Clock</a>
+          <a href="timer.html">Timer</a>
+          <a href="stopwatch.html">Stopwatch</a>
+          <a href="countdown.html">Countdown</a>
+          <a href="alarm.html">Alarm</a>
+          <a href="focus.html">Focus</a>
+        </ul>
+      </div>
       <div class="select">
         <span id="header123">Help</span>
         <ul id="cats">
@@ -38,6 +58,7 @@
     </nav>
     <div class="macsidebar" id="sidebar">
       <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
       <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
       <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
@@ -54,19 +75,19 @@
           <option value="20">20</option>
           <option value="30">30</option>
           <option value="45">45</option>
-          <option value="60">60</option>
-        </select><span class="pos">m</span>
+          <option value="60">60</option></select
+        ><span class="pos">m</span>
         :
         <div id="minute"></div>
         <select name="minutes" id="minutes">
-          <option value="0">00</option>
-        </select><span class="pos">s</span>
+          <option value="0">00</option></select
+        ><span class="pos">s</span>
       </div>
       <div class="lcontain">
-        <div id="line"></div>        
+        <div id="line"></div>
       </div>
       <button id="start">Start</button>
     </div>
-    <audio src="notif.mp3" style="display: none;" id="notif"></audio>
+    <audio src="notif.mp3" style="display: none" id="notif"></audio>
   </body>
 </html>
