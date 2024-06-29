@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   close.addEventListener("click", function () {
     close.parentElement.parentElement.style.display = "none";
-    localStorage.setItem("mactimecloseee", "closed");
+    localStorage.setItem("mactimecloseeee", "closed");
   });
   document.addEventListener("mousemove", function (event) {
     if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const boxes = document.querySelectorAll(".checkbox");
   let pinned = localStorage.getItem("macTimePinned");
   let pinnedArray = pinned ? pinned.split(",") : [];
+  console.log(document.getElementById("alarmf"))
   boxes.forEach((box) => {
     if (pinnedArray.includes(box.value)) {
       box.checked = true;

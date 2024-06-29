@@ -3,15 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title">Calendar | MacTime</title>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="calendar.js"></script>
-    <script src="app.js"></script>
+    <title>Calendar | MacTime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
   </head>
   <body>
     <div class="overflow-menu shoot" id="overflow-menu">
@@ -25,7 +19,7 @@
     </div>
     <nav class="nav">
       <div class="overflowm shoot" id="overflowm">
-        <img src="bars-solid.svg" alt="Menu" class="shoot">
+        <img src="bars-solid.svg" alt="Menu" class="shoot" />
       </div>
       <a href="/mactime/" class="logo">
         <img src="mactime-logo.png" alt="MacTime Logo" />
@@ -69,168 +63,40 @@
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
-    <!--
-    <table class="table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Sunday</th>
-          <th>Monday</th>
-          <th>Tuesday</th>
-          <th>Wednesday</th>
-          <th>Thursday</th>
-          <th>Friday</th>
-          <th>Saturday</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>8 am</th>
-          <td style="border-radius: 30px 0 0 0;">1.</td>
-          <td>2.</td>
-          <td>3.</td>
-          <td>4.</td>
-          <td>5.</td>
-          <td>6.</td>
-          <td style="border-radius: 0 30px 0 0;">7.</td>
-        </tr>
-        <tr>
-          <th>9 am</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>10 am</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>11 am</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>12 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>1 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>2 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>3 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>4 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>5 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>6 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>7 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>8 pm</th> 
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>9 pm</th> 
-          <td style="border-radius: 0 0 0 30px;"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td style="border-radius: 0 0 30px  0;"></td>
-        </tr>
-      </tbody>
-    </table>
-  -->
-    <div class="main">
-      <h1 style="color: white; text-shadow: 0px 0px 15px gray">
-        MacTime Calendar coming soon!
-      </h1>
+    <div class="wrap">
+      <div id="container">
+        <div id="header">
+          <div id="monthDisplay"></div>
+          <div>
+            <button id="backButton">Back</button>
+            <button id="nextButton">Next</button>
+          </div>
+        </div>
+        <div id="weekdays">
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+        </div>
+        <div id="calendar"></div>
+      </div>
+      <div id="newEventModal">
+        <h2>New Event</h2>
+        <input id="eventTitleInput" placeholder="Event Title" />
+        <button id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
+      </div>
+      <div id="deleteEventModal">
+        <h2>Event</h2>
+        <p id="eventText"></p>
+        <button id="deleteButton">Delete</button>
+        <button id="closeButton">Cancel</button>
+      </div>
+      <div id="modalBackDrop"></div>
     </div>
+    <script src="calendar.js"></script>
   </body>
 </html>

@@ -16,17 +16,16 @@
   <body>
     <div class="announce">
       <h2>
-        The
-        <a href="/macblog/updates/mactime/2024/april.html" target="_blank"
-          >MacTime v.0.10 April Update</a
-        >
-        is here 🕒!
+        The first stable version of MacTime is released! Check out the
+        <a href="/macblog/updates/mactime/2024/july.html" target="_blank"
+          >MacTime v.1.0 July Update</a
+        > 🥳!
         <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
       </h2>
     </div>
     <script>
       let clos = document.getElementById("closea");
-      if (localStorage.getItem("mactimecloseee")) {
+      if (localStorage.getItem("mactimecloseeee")) {
         clos.parentElement.parentElement.style.display = "none";
       }
     </script>
@@ -41,7 +40,7 @@
     </div>
     <nav class="nav">
       <div class="overflowm shoot" id="overflowm">
-        <img src="bars-solid.svg" alt="Menu" class="shoot">
+        <img src="bars-solid.svg" alt="Menu" class="shoot" />
       </div>
       <a href="/mactime/" class="logo">
         <img src="mactime-logo.png" alt="MacTime Logo" />
@@ -94,6 +93,12 @@
           id="alarmf"
         ></iframe>
         <iframe
+          src="clean/calendar.html"
+          frameborder="0"
+          class="frame"
+          id="calendarrf"
+        ></iframe>
+        <iframe
           src="clean/countdown.html"
           frameborder="0"
           class="frame"
@@ -136,6 +141,16 @@
               value="alarm"
             />
             <label for="alarm">Alarm</label>
+          </div>
+          <div class="box">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="choose"
+              id="calendarr"
+              value="calendarr"
+            />
+            <label for="calendarr">Calendar</label>
           </div>
           <div class="box">
             <input
@@ -189,17 +204,6 @@
               checked="true"
             />
             <label for="world">World Clock</label>
-          </div>
-          <div class="box">
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="choose"
-              id="calendar"
-              value="calendar"
-              disabled
-            />
-            <label for="calendar">Calendar (coming soon)</label>
           </div>
         </div>
       </div>
