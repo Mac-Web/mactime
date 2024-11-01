@@ -1,33 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const bar = document.getElementById("sidebar");
-  const close = document.getElementById("closea");
-  const overflowMenu = document.getElementById("overflow-menu");
-  document.addEventListener("click", function () {
-    bar.classList.remove("movingbar");
-  });
-  document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("shoot")) {
-      overflowMenu.classList.add("menu-slide");
-    } else {
-      overflowMenu.classList.remove("menu-slide");
-    }
-  })
-  close.addEventListener("click", function () {
-    close.parentElement.parentElement.style.display = "none";
-    localStorage.setItem("mactimecloseeee", "closed");
-  });
-  document.addEventListener("mousemove", function (event) {
-    if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {
-      bar.classList.add("movingbar");
-    }
-  });
-});
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const boxes = document.querySelectorAll(".checkbox");
   let pinned = localStorage.getItem("macTimePinned");
   let pinnedArray = pinned ? pinned.split(",") : [];
-  console.log(document.getElementById("alarmf"))
+  let updateModal = document.querySelector(".modal-background");
   boxes.forEach((box) => {
     if (pinnedArray.includes(box.value)) {
       box.checked = true;
@@ -54,4 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
       element.style.display = box.checked ? "initial" : "none";
     }
   }
+  document.addEventListener("click", (e) =>{
+    if (e.target === updateModal) {
+      e.target.style.display = "none";
+      localStorage.setItem("mactimemodal", "true");
+    }
+  })
 });

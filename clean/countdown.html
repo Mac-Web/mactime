@@ -6,22 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title class="title">Countdown | MacTime</title>
     <link rel="stylesheet" href="/mactime/style.css" />
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <script src="/mactime/countdown.js"></script>
   </head>
   <body>
     <div class="wrap">
       <div class="inputs">
-        <input type="text" class="yearInput input" placeholder="Year" id="year" />
-        <input type="text" class="monthInput input" placeholder="Month" id="month"/>
-        <input type="text" class="dayInput input" placeholder="Day" id="day"/>
-        <input type="text" class="hourInput input" placeholder="Hour" id="hour"/>
-        <input type="text" class="minuteInput input" placeholder="Minute" id="minute"/>
-        <input type="text" class="secondInput input" placeholder="Second" id="second"/>
+        <input
+          type="text"
+          class="yearInput input"
+          placeholder="Year"
+          id="year"
+        />
+        <input
+          type="text"
+          class="dayInput input"
+          placeholder="Month/Day"
+          id="day"
+        />
+        <input
+          type="text"
+          class="hourInput input"
+          placeholder="Hour"
+          id="hour"
+        />
+        <input
+          type="text"
+          class="minuteInput input"
+          placeholder="Minute"
+          id="minute"
+        />
+        <input
+          type="text"
+          class="secondInput input"
+          placeholder="Second"
+          id="second"
+        />
       </div>
-      <div class="inputs wer placeholder" style="background-color: rgb(40, 40, 40);" id="placeholder">
+      <div
+        class="inputs wer placeholder"
+        style="background-color: rgb(40, 40, 40)"
+        id="placeholder"
+      >
         <div class="result input">Year</div>
-        <div class="result input">Month</div>
         <div class="result input">Day</div>
         <div class="result input">Hour</div>
         <div class="result input">Minute</div>
@@ -37,6 +64,7 @@
       </div>
       <h2 id="blub">Type the countdown date in the input field!</h2>
       <button class="btn" id="btn">Go!</button>
+      <button class="btn" id="end" style="display: none">End</button>
     </div>
   </body>
 </html>

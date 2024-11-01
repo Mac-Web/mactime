@@ -2,11 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="UWHTkMxkkqv0hsUJcBHWc3ZjLXysHyydwRcO67gs_tk"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alarm | MacTime</title>
-    <link rel="stylesheet" href="style.css" />
+    <title id="title">Time | MacTime</title>
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
-    <script src="alarm.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="time.js"></script>
     <script src="global.js"></script>
   </head>
   <body>
@@ -64,64 +68,41 @@
       </div>
     </nav>
     <div class="wrap">
-      <form class="digits">
-        <div class="alld">
-          <select name="hour" id="hour" class="selecta">
-            <option value="0">12 am</option>
-            <option value="1">01 am</option>
-            <option value="2">02 am</option>
-            <option value="3">03 am</option>
-            <option value="4">04 am</option>
-            <option value="5">05 am</option>
-            <option value="6">06 am</option>
-            <option value="7">07 am</option>
-            <option value="8">08 am</option>
-            <option value="9">09 am</option>
-            <option value="10">10 am</option>
-            <option value="11">11 am</option>
-            <option value="12">12 pm</option>
-            <option value="13">01 pm</option>
-            <option value="14">02 pm</option>
-            <option value="15">03 pm</option>
-            <option value="16">04 pm</option>
-            <option value="17">05 am</option>
-            <option value="18">06 am</option>
-            <option value="19">07 pm</option>
-            <option value="20">08 pm</option>
-            <option value="21">09 pm</option>
-            <option value="22">10 pm</option>
-            <option value="23">11 pm</option>
-          </select>
-          <select name="minute" id="minute" class="selecta">
-            <option value="0">00</option>
-            <option value="5">05</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
-            <option value="40">40</option>
-            <option value="45">45</option>
-            <option value="50">50</option>
-            <option value="55">55</option>
-          </select>
-          <select name="second" id="second" class="selecta">
-            <option value="0">00</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
-          </select>
+      <div class="time">
+        <div id="hour" class="digit"></div>
+        :
+        <div id="minute" class="digit"></div>
+        :
+        <div id="second" class="digit"></div>
+        <div id="half" class="digit"></div>
+      </div>
+      <div class="date">
+        <div id="day"></div>
+        ,
+        <div id="month"></div>
+        /
+        <div id="date"></div>
+        /
+        <div id="year"></div>
+      </div>
+      <div class="info">
+        <!--
+        <div class="sun">
+          <div class="rise">
+            <img src="sun-solid.svg" alt="" />
+            7:26 am
+          </div>
+          <div class="set">
+            <img src="moon-solid.svg" alt="" />
+            5:06 pm
+          </div>
         </div>
-        <div class="labels">
-          <div class="label">Hour</div>
-          <div class="label">Minute</div>
-          <div class="label">Second</div>
-        </div>
-      </form>
-      <button class="btn" id="btn">Set Alarm</button>
+        <div class="sep">|</div>
+      -->
+        <div id="zone">Time zones coming soon</div>
+        <div class="sep">|</div>
+        <div id="zone">Customization coming soon</div>
+      </div>
     </div>
   </body>
 </html>

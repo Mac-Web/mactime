@@ -9,7 +9,7 @@
       href="/logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="/mactime/timer.css" />
+    <link rel="stylesheet" href="/mactime/style.css" />
     <script src="/mactime/timer.js"></script>
   </head>
   <body>
@@ -49,7 +49,13 @@
       <div class="lcontain">
         <div id="line"></div>        
       </div>
-      <button id="start">Start</button>
+      <button class="btn" id="start">Start</button>
+    </div>
+    <div class="toggle" style="top: 10px; right: 10px;">
+      <div class="slider" id="slider">
+        <div id="slider-circle"></div>
+      </div>
+      <div class="toggle-label">Focus Mode</div>
     </div>
     <audio src="/mactime/notif.mp3" style="display: none;" id="notif"></audio>
   </body>

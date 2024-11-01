@@ -10,72 +10,95 @@
     <title id="title">Home | MacTime</title>
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="index.css" />
     <script src="index.js"></script>
+    <script src="global.js"></script>
+    <style>
+      .wrap {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: initial;
+      }
+
+      .panel {
+        width: 80%;
+        height: 100%;
+        overflow: auto;
+        height: calc(100vh - 50.6px);
+      }
+
+      .side {
+        width: 20%;
+        padding-block: 20px;
+        height: calc(100vh - 50.6px);
+        overflow: auto;
+      }
+
+      .side h3 {
+        color: white;
+        width: 85%;
+        margin-inline: 7.5%;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+      .boxes {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .box {
+        color: white;
+        width: 95%;
+        margin-inline: 2.5%;
+        padding-inline: 15px;
+        font-size: 18px;
+        display: flex;
+        border-radius: 10px;
+        transition: background-color 0.25s ease;
+      }
+
+      .box label {
+        margin-left: 10px;
+        width: 100%;
+        padding-block: 10px;
+        cursor: pointer;
+        display: block;
+      }
+
+      .frame {
+        border: none;
+        outline: none;
+        width: 47%;
+        margin: 10px;
+        border-radius: 10px;
+        border: 2px solid gray;
+        padding: 15px;
+        height: 300px;
+        display: none;
+      }
+
+      .box:hover {
+        background-color: rgb(20, 20, 20);
+      }
+      @media (width < 500px) {
+        .wrap {
+          display: flex;
+          flex-direction: column !important;
+        }
+        .panel {
+          width: 100%;
+          height: 70vh !important;
+          overflow: auto;
+        }
+        .side {
+          width: 100% !important;
+          height: 30vh !important;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="announce">
-      <h2>
-        The first stable version of MacTime is released! Check out the
-        <a href="/macblog/updates/mactime/2024/july.html" target="_blank"
-          >MacTime v.1.0 July Update</a
-        > 🥳!
-        <img src="/maclearn/xmark-solid.svg" alt="Close" id="closea" />
-      </h2>
-    </div>
-    <script>
-      let clos = document.getElementById("closea");
-      if (localStorage.getItem("mactimecloseeee")) {
-        clos.parentElement.parentElement.style.display = "none";
-      }
-    </script>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="calendar.html" class="olink">Calendar</a>
-      <a href="world.html" class="olink">World Clock</a>
-      <a href="timer.html" class="olink">Timer</a>
-      <a href="stopwatch.html" class="olink">Stopwatch</a>
-      <a href="countdown.html" class="olink">Countdown</a>
-      <a href="alarm.html" class="olink">Alarm</a>
-      <a href="focus.html" class="olink">Focus</a>
-    </div>
-    <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="bars-solid.svg" alt="Menu" class="shoot" />
-      </div>
-      <a href="/mactime/" class="logo">
-        <img src="mactime-logo.png" alt="MacTime Logo" />
-      </a>
-      <a href="calendar.html" class="link">Calendar</a>
-      <a href="world.html" class="link">World Clock</a>
-      <a href="timer.html" class="link">Timer</a>
-      <a href="stopwatch.html" class="link">Stopwatch</a>
-      <a href="countdown.html" class="link">Countdown</a>
-      <a href="alarm.html" class="link">Alarm</a>
-      <a href="focus.html" class="link">Focus</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="calendar.html">Calendar</a>
-          <a href="world.html">World Clock</a>
-          <a href="timer.html">Timer</a>
-          <a href="stopwatch.html">Stopwatch</a>
-          <a href="countdown.html">Countdown</a>
-          <a href="alarm.html">Alarm</a>
-          <a href="focus.html">Focus</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/mactime/">About</a>
-          <a href="/macblog/updates/mactime/">Updates</a>
-          <a href="/macblog/projects/mactime/">Docs</a>
-          <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank"
-            >Feedback</a
-          >
-        </ul>
-      </div>
-    </nav>
     <div class="macsidebar" id="sidebar">
       <a href="/"><img src="/logo.png" alt="" /></a>
       <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
@@ -84,6 +107,74 @@
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <img src="mactime-logo.png" alt="MacTime Logo" />
+      </a>
+      <a href="calendar.html" class="nav-link">Calendar</a>
+      <a href="time.html" class="nav-link">Time</a>
+      <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+      <a href="alarm.html" class="nav-link">Alarm</a>
+      <div class="right">
+        <div class="select help-menu tabs">
+          <span class="help-label help-menu">Tabs</span>
+          <img src="/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="cats help-menu">
+            <a href="calendar.html">Calendar</a>
+            <a href="time.html">Time</a>
+            <a href="timer.html">Timer</a>
+            <a href="stopwatch.html">Stopwatch</a>
+            <a href="countdown.html">Countdown</a>
+            <a href="alarm.html">Alarm</a>
+            <a href="focus.html">Focus</a>
+          </ul>
+        </div>
+        <div class="tools select help-menu">
+          <span class="help-label help-menu">Tools</span>
+          <img src="/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="cats help-menu">
+            <a href="timer.html">Timer</a>
+            <a href="countdown.html">Countdown</a>
+          </ul>
+        </div>
+        <div class="select help-menu">
+          <span class="help-label help-menu">Help</span>
+          <img src="/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="cats help-menu">
+            <a href="/macblog/projects/mactime/">About</a>
+            <a href="/macblog/updates/mactime/">Updates</a>
+            <a href="/macblog/projects/mactime/">Docs</a>
+            <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <img src="/profile.svg" class="profile" id="profile" />
+      </div>
+    </nav>
+    <div class="modal-background">
+      <div class="modal">
+        <h2 class="modal-title">MacTime November Update</h2>
+        <img src="update.png" class="modal-img" />
+        <p class="modal-des">
+          With huge changes, new appearance, new features, and more, the MacTime
+          November Update is here!
+        </p>
+        <a
+          href="/macblog/updates/mactime/2024/november.html"
+          class="modal-link"
+          target="_blank"
+        >
+          What's new
+        </a>
+      </div>
+    </div>
+    <script>
+      let updateModal = document.querySelector(".modal-background");
+      if (localStorage.mactimemodal) {
+        updateModal.style.display = "none";
+      }
+    </script>
     <div class="wrap">
       <div class="panel" id="panel">
         <iframe
@@ -161,17 +252,6 @@
               value="countdown"
             />
             <label for="countdown">Countdown</label>
-          </div>
-          <div class="box">
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="choose"
-              id="focus"
-              value="focus"
-              checked="true"
-            />
-            <label for="focus">Focus</label>
           </div>
           <div class="box">
             <input

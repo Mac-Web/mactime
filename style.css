@@ -1,274 +1,31 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: rgb(40, 40, 40);
-}
-.select {
-  background-color: black;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 18px;
-  border-bottom: 2px solid black;
-  font-weight: bold;
-  appearance: none;
-  padding-block: 12px;
-  padding-inline: 20px;
-  border-radius: 20px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-#cats {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 35px;
-  width: 140px;
-  border-radius: 0px 0px 10px 10px;
-  background-color: black;
-  padding-bottom: 10px;
-  z-index: 10000 !important;
-  transition: display 0.3s ease;
-}
-
-.select:hover #cats {
-  display: flex;
-  z-index: 10000;
-  box-shadow: 0px 10px 15px rgb(60, 60, 60);
-}
-
-#cats a {
-  color: var(--text-color);
-  text-decoration: none;
-  padding-block: 10px;
-  font-size: 18px;
-  z-index: 10000;
-  position: relative;
-}
-
-#cats a::after {
-  content: "";
-  height: 2px;
-  position: absolute;
-  z-index: 10000;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0px;
-  margin: 0;
-  background-color: rgb(35, 130, 37);
-  transition: width 0.15s ease;
-}
-
-#cats a:hover::after {
-  width: 50%;
-  background-color: rgb(35, 130, 37);
-  transition: width 0.2s ease;
+  background-color: rgb(25, 25, 25);
 }
 
 .movingbar {
   transform: translateX(0px) !important;
 }
 
-.wrap {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-form {
-  width: 36%;
-  margin-inline: 32%;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(30, 30, 30);
-  border-radius: 15px;
-  flex-direction: column;
-}
-
-.alld {
-  display: flex;
-  justify-content: space-between;
-}
-
-.labels {
-  display: flex;
-  justify-content: space-between;
-}
-
-.placeholder {
-  visibility: hidden;
-  height: 0;
-  transition: height 0.5s ease;
-}
-
-.placeholderr {
-  visibility: visible;
-  height: 50px;
-}
-
-.debug {
-  color: white;
-  font-size: 18px;
-  padding-bottom: 20px;
-  letter-spacing: 0.5px;
-}
-
-#blub {
-  transition: color 0.3s ease;
-}
-
-select,
-.label {
-  width: 28%;
-  padding-block: 12px;
-  color: white;
-  background-color: transparent;
-  font-size: 30px;
-  appearance: none;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: background-color 0.2s ease;
-}
-
-.label {
-  font-size: 18px;
-  padding-block: 10px;
-}
-
-select:first-of-type {
-  border-radius: 15px 0px 0px 0px;
-}
-
-select:last-of-type {
-  border-radius: 0px 15px 0px 0px;
-}
-
-select:hover {
-  background-color: rgb(20, 20, 20);
-}
-
-option {
-  background-color: rgb(30, 30, 30);
-  font-size: 19px;
-}
-
-.btn {
-  width: 15%;
-  margin-inline: 42.5%;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  background-color: rgb(30, 30, 30);
-  border-radius: 15px;
-  padding-block: 15px;
-  margin-top: 30px;
-  color: white;
-  font-size: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.wer div {
-  font-size: 17px;
-  color: rgb(200, 200, 200);
-}
-
-.btn:hover {
-  background-color: rgb(20, 20, 20);
-}
-
-.btn:active {
-  background-color: rgb(10, 10, 10);
-}
-
-.inputs {
-  width: 70%;
-  margin-inline: 15%;
-  display: flex;
-  background-color: rgb(30, 30, 30);
-  border-radius: 15px;
-  justify-content: space-between;
-}
-
-.input {
-  width: 16%;
-  border: none;
-  display: block;
-  outline: none;
-  background-color: transparent;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  padding-block: 15px;
-}
-
-.dks {
-  height: 0;
-  visibility: hidden;
-  transition: height 0.3s ease;
-}
-
-#blub {
-  color: white;
-  margin-top: 30px;
-}
-
-.full {
-  height: 50px;
-}
-
-@media (max-width: 800px) {
-  .btn {
-    width: 60%;
-    margin-inline: 20%;
-    margin-top: 5px;
-    padding-block: 5px;
-  }
-
-  form {
-    width: 80%;
-    margin-inline: 10%;
-  }
-
-  select {
-    padding-block: 10px;
-  }
-
-  .inputs {
-    width: 95%;
-    margin-inline: 2.5%;
-  }
-}
-
 .macsidebar {
-  position: absolute;
+  position: fixed;
   top: 9vh;
   left: 3px;
   transform: translateX(-120%);
   transition: transform 0.15s ease;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(10, 10, 10, 0.9);
   padding-inline: 8px;
   height: 90vh;
   z-index: 10000000;
-  border-radius: 15px;
+  border-radius: 5px;
   padding-block: 10px;
   overflow: auto;
 }
@@ -284,74 +41,42 @@ option {
 }
 
 .macsidebar a:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
 .nav {
-  background-color: black;
   color: white;
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: flex-start;
+  padding-inline: 100px;
   position: sticky;
   top: 0;
+  background-color: rgba(25, 25, 25, 0.9);
+  gap: 10px;
+  z-index: 100;
 }
 
-.link,
-.olink {
-  padding-block: 12px;
-  padding-inline: 20px;
+.nav-link {
+  padding-block: 10px;
+  padding-inline: 15px;
   font-size: 18px;
   text-decoration: none;
   font-weight: bold;
   margin: 0;
+  margin-block: 5px;
   position: relative;
   color: white;
-  border-bottom: 2px solid black;
-  transition: border-bottom 0.3s;
+  transition: background-color 0.15s;
+  border-radius: 5px;
 }
 
-.link::after,
-.olink::before {
-  content: "";
-  height: 2px;
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0px;
-  margin: 0;
-  background-color: rgb(35, 130, 37);
-  transition: width 0.15s ease;
-}
-
-.link:hover::after {
-  width: 80%;
-  background-color: rgb(35, 130, 37);
-  transition: width 0.2s ease;
-}
-
-.olink {
-  transition: color 0.15s ease;
-  border-color: rgb(30, 30, 30);
-}
-
-.olink::before {
-  height: 0px;
-  transform: translateY(-50%);
-  width: 3px;
-  left: 0;
-  top: 50%;
-  transition: height 0.2s ease;
-}
-
-.olink:hover::before {
-  height: 80%;
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .logo {
-  margin-inline: 35px;
+  margin-right: 30px;
   height: 32px;
 }
 
@@ -359,46 +84,176 @@ option {
   height: 32px;
 }
 
-.main {
+.right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.profile {
+  box-sizing: content-box;
+  height: 32px;
+  width: 32px;
+  padding: 5px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.select {
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  appearance: none;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-block: 5px;
+  z-index: 100000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  transition: background-color 0.15s ease;
+}
+
+.select:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.caret {
+  width: 10px;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+#cats {
+  flex-direction: column;
+  border-radius: 0px 0px 5px 5px;
+  background-color: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 33px;
   width: 100%;
+  transform-origin: top;
+  left: 0;
+  display: flex;
+  transition: transform 0.15s ease !important;
+  padding-bottom: 5px;
+  transform: scaleY(0);
+}
+
+#cats a {
+  color: rgb(130, 130, 130);
+  text-decoration: none;
+  padding-block: 10px;
+  font-size: 17px;
+  transition: color 0.15s ease;
+  font-weight: normal;
+}
+
+#cats a:hover {
+  color: white;
+}
+
+.modal-background {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: calc(100vh - 46.67px);
 }
 
-.time {
-  padding-bottom: 50px;
-  font-size: 75px;
+.modal {
+  background-color: rgb(15, 15, 15);
+  width: 400px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 50px rgb(60, 60, 60);
+  position: relative;
 }
 
-.tools {
-  width: 20%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.tool {
-  background-color: black;
-  padding-block: 15px;
-  font-size: 20px;
-  width: 45%;
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  cursor: pointer;
+.modal-title {
+  font-size: 25px;
+  margin-bottom: 30px;
   color: white;
+  text-align: center;
+}
+
+.modal-des {
+  color: rgb(180, 180, 180);
+  line-height: 25px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.modal-link {
+  background-color: rgb(35, 130, 35);
+  color: white;
+  text-decoration: none;
+  width: 40%;
+  margin-inline: 30%;
+  display: block;
+  text-align: center;
+  padding-block: 10px;
+  font-size: 18px;
+  border-radius: 5px;
   font-weight: bold;
+  margin-top: 30px;
   transition: background-color 0.3s ease;
 }
 
-.tool:hover {
-  background-color: rgb(20, 20, 20);
+.modal-link:hover {
+  background-color: rgb(15, 110, 15);
+}
+
+.modal-link:active {
+  background-color: rgb(5, 100, 5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+  transform: scale(1.4);
+}
+
+.modal-close:active {
+  transform: scale(0.9);
 }
 
 .wrap {
   width: 100%;
+  max-height: calc(100vh - 55px);
   height: calc(100vh - 55px);
   display: flex;
   align-items: center;
@@ -406,241 +261,87 @@ option {
   flex-direction: column;
 }
 
-.table {
-  position: relative;
-  width: 100%;
-  border-collapse: collapse;
-  color: white;
-  background-color: rgb(50, 50, 50);
-}
-
-.table th {
-  font-size: 20px;
-  padding-block: 15px;
-  width: calc(96% / 7);
-  background-color: rgb(60, 60, 60);
-  border: 0;
-  margin: 0;
-}
-
-thead th {
-  position: sticky;
-  top: 51px;
-  z-index: 1000;
-}
-
-tr th:first-child {
-  width: 4%;
-  font-size: 15px;
-  padding-block: 10px;
-  text-align: right;
-  padding-right: 5px;
-}
-
-.table td {
-  font-size: 18px;
-  text-align: center;
-  padding-block: 10px;
-  background-color: rgb(50, 50, 50);
-}
-
-.time,
-.date {
-  color: white;
+form {
+  width: 36%;
+  margin-inline: 32%;
   display: flex;
-  font-size: 40px;
-  font-weight: bold;
-  margin-block: 10px;
-}
-
-.time {
-  font-size: 150px;
-  text-shadow: 0px 0px 15px gray;
-}
-
-.digit {
-  width: 160px;
-  text-shadow: 0px 0px 15px gray;
-}
-
-.tip {
-  color: white;
-  font-size: 20px;
-  padding-top: 30px;
-}
-
-#minutes,
-#seconds,
-#mili {
-  width: 165px;
-}
-
-#half {
-  font-size: 90px;
-  align-self: flex-end;
-  margin-bottom: 10px;
-  margin-left: 20px;
-}
-
-#month {
-  margin-left: 5px;
-}
-
-.info {
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.sun,
-#zone,
-.sep {
-  display: flex;
-  color: rgb(224, 224, 224);
-  font-size: 18px;
   justify-content: center;
-}
-
-.rise {
-  margin-right: 15px;
-}
-
-.sep {
-  width: auto;
-  margin-inline: 20px;
-  font-size: 28px;
-}
-
-@media (max-width: 800px) {
-  .time {
-    font-size: 70px;
-  }
-
-  .digit {
-    width: 70px;
-  }
-
-  #half {
-    font-size: 45px;
-  }
-
-  .time span {
-    width: 100px !important;
-  }
-  .tool {
-    width: 90px;
-  }
-}
-/*
-td:hover {
-  background-color: rgb(30, 30, 30);
-  border-radius: 10px !important;
-}
-*/
-
-.announce {
-  background-color: rgb(30, 30, 30);
-  position: absolute;
-  padding-block: 10px;
-  top: 46.5px;
-  width: 100%;
-  color: white;
-}
-
-#closea {
-  float: right;
-  width: 20px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  margin-right: 30px;
-}
-
-#closea:hover {
-  transform: rotate(-90deg);
-}
-
-.announce h2 {
-  font-size: 18px;
-  text-align: left;
-  padding-left: 30px;
-  margin-block: 0;
-}
-
-.announce a {
-  color: white;
-}
-
-.overflowm {
-  display: none;
-  width: 40px;
-  padding: 10px;
-  height: 40px;
-  border-radius: 10px;
-  margin-inline: 25px;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: black;
-  transition: background-color 0.2s ease !important;
-}
-
-.overflowm:hover {
-  background-color: rgb(30, 30, 30);
-}
-
-.overflow-menu {
-  display: flex;
+  background-color: rgb(15, 15, 15);
+  border-radius: 5px;
   flex-direction: column;
-  transform: translateX(-50vw);
-  width: 50vw;
-  position: absolute;
-  padding-block: 20px;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 10000;
+}
+
+.alld {
+  display: flex;
+  justify-content: space-between;
+}
+
+select,
+.label {
+  width: 28%;
+  padding-block: 12px;
+  color: white;
+  background-color: transparent;
+  font-size: 30px;
+  appearance: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.label {
+  font-size: 18px;
+  padding-block: 10px;
+}
+
+select:first-of-type {
+  border-radius: 15px 0px 0px 0px;
+}
+
+select:last-of-type {
+  border-radius: 0px 15px 0px 0px;
+}
+
+option {
   background-color: rgb(30, 30, 30);
-  transition: transform 0.3s ease !important;
+  font-size: 19px;
 }
 
-.menu-slide {
-  transform: translateX(0px);
-  box-shadow: 0px 0px 10px rgb(30, 30, 30);
+.labels {
+  display: flex;
+  justify-content: space-between;
 }
 
-.secondselect {
-  display: none;
+.btn {
+  width: 150px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: rgb(35, 130, 35);
+  border-radius: 5px;
+  padding-block: 13px;
+  color: white;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+  font-weight: bold;
 }
 
-@media (width < 1000px) {
-  .link {
-    display: none;
-  }
-  .secondselect {
-    display: flex;
-  }
+.btn:hover {
+  background-color: rgb(15, 110, 15);
 }
 
-@media (width < 500px) {
-  .link,
-  .select {
-    display: none;
-  }
-  .logo {
-    padding-block: 8px;
-    box-sizing: content-box;
-    margin: 0;
-  }
-  .overflowm {
-    display: flex;
-  }
+.btn:active {
+  background-color: rgb(5, 100, 5);
 }
+
+/*Above is code for Alarm*/
 
 #header {
   padding: 10px;
   color: white;
-  font-size: 26px;
+  font-size: 35px;
   font-family: sans-serif;
   display: flex;
   justify-content: space-between;
@@ -648,7 +349,7 @@ td:hover {
   padding-bottom: 30px;
 }
 #header button {
-  background-color: rgb(10, 10, 10);
+  background-color: rgb(15, 15, 15);
   border: none;
   outline: none;
   padding: 20px;
@@ -657,11 +358,6 @@ td:hover {
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-#header button:hover {
-  background-color: rgb(30, 30, 30);
 }
 
 #container {
@@ -697,11 +393,11 @@ td:hover {
 }
 
 .day + #currentDay {
-  background-color: rgb(35, 130, 37);
+  background-color: rgb(35, 130, 35);
 }
 .event {
   padding: 5px;
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(15, 15, 15);
   color: white;
   border-radius: 5px;
   max-height: 55px;
@@ -741,6 +437,7 @@ td:hover {
   border: 1.5px solid white;
   color: white;
   border-radius: 5px;
+  transition: border 0.3s ease;
 }
 #eventTitleInput.error {
   border: 1.5px solid red;
@@ -760,25 +457,43 @@ td:hover {
 }
 #cancelButton {
   background-color: transparent;
-  border: 2px solid rgb(35, 130, 37);
+  border: 2px solid rgb(35, 130, 35);
   margin-left: 10px;
   padding-inline: 0;
   text-align: center;
+  transition: border 0.3s ease;
+}
+#cancelButton:hover {
+  border: 2px solid rgb(15, 110, 15);
+}
+#cancelButton:active {
+  border: 2px solid rgb(5, 100, 5);
 }
 #closeButton {
   margin-left: 10px;
 }
 #saveButton,
 #closeButton {
-  background-color: rgb(35, 130, 37);
+  background-color: rgb(35, 130, 35);
   padding: 10px;
-  border: 2px solid rgb(35, 130, 37);
+  border: 2px solid rgb(35, 130, 35);
   border-radius: 5px;
   width: 80px;
   color: white;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+#saveButton:hover,
+#closeButton:hover {
+  background-color: rgb(15, 110, 15);
+  border-color: rgb(15, 110, 15);
+}
+#saveButton:active,
+#closeButton:active {
+  background-color: rgb(5, 100, 5);
+  border-color: rgb(5, 100, 5);
 }
 #eventText {
   font-size: 16px;
@@ -793,4 +508,230 @@ td:hover {
   height: 100vh;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Above is code for Calendar*/
+
+.inputs {
+  width: 70%;
+  margin-inline: 15%;
+  display: flex;
+  background-color: rgb(15, 15, 15);
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.input {
+  width: 16%;
+  border: none;
+  display: block;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-block: 15px;
+}
+
+.placeholder {
+  visibility: hidden;
+  height: 0;
+  transition: height 0.5s ease;
+}
+
+.dks {
+  height: 0;
+  visibility: hidden;
+  transition: height 0.3s ease;
+}
+
+.placeholderr {
+  visibility: visible;
+  height: 50px !important;
+}
+
+#blub {
+  color: white;
+  margin-top: 30px;
+  transition: color 0.3s ease;
+}
+
+.full {
+  height: 50px;
+}
+
+.wer {
+  background-color: transparent;
+}
+
+/*Above is code for countdown*/
+
+.header {
+  color: white;
+  text-shadow: 0px 0px 15px gray;
+}
+
+.time,
+.date {
+  color: white;
+  display: flex;
+  font-weight: bold;
+  margin-block: 10px;
+  font-size: 40px;
+}
+
+.time {
+  font-size: 100px;
+  padding-bottom: 20px;
+  text-shadow: 0px 0px 15px gray;
+}
+
+.pos {
+  font-size: 40px;
+  align-self: flex-end;
+  padding-bottom: 25px;
+  padding-right: 20px;
+  text-shadow: 0px 0px 15px gray;
+}
+
+select#hours,
+select#minutes {
+  color: white;
+  width: 110px;
+  padding-block: 15px;
+  text-align: center;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 75px;
+  text-shadow: 0px 0px 15px gray;
+  font-weight: bold;
+}
+
+#hours option,
+#minutes option {
+  text-align: center;
+  font-size: 20px;
+}
+
+.lcontain {
+  height: 4px;
+  width: 300px;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start; /* Align items to the start */
+}
+
+#line {
+  height: 100%;
+  transition: transform 0.2s ease;
+  background-color: gray;
+  width: 100%;
+  border-radius: 10px;
+  transform-origin: 100% 0px;
+}
+
+/*Above is code for focus*/
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 50.6px);
+}
+
+.tip {
+  color: white;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.sun,
+#zone,
+.sep {
+  display: flex;
+  color: rgb(224, 224, 224);
+  font-size: 18px;
+  justify-content: center;
+}
+
+.rise {
+  margin-right: 15px;
+}
+
+.sep {
+  width: auto;
+  margin-inline: 20px;
+  font-size: 28px;
+}
+
+div#month {
+  margin-left: 10px;
+}
+
+/*Above is code for world clock*/
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 70px;
+  right: 100px;
+}
+
+.toggle-label {
+  color: white;
+  font-size: 16px;
+}
+
+.slider {
+  width: 30px;
+  height: 16px;
+  padding-block: 2px;
+  padding-inline: 3px;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#slider-circle {
+  background-color: rgb(35, 130, 35);
+  width: 12px;
+  height: 12px;
+  border-radius: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.active-toggle {
+  transform: translateX(12px);
+}
+
+/*Above is code for timer*/
+
+.tabs {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .tabs {
+    display: flex;
+  }
+
+  .nav-link,
+  .tools {
+    display: none;
+  }
 }

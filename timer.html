@@ -4,62 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="title">Timer | MacTime</title>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="timer.css" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
     <script src="timer.js"></script>
+    <script src="global.js"></script>
   </head>
   <body>
-    <div class="overflow-menu shoot" id="overflow-menu">
-      <a href="calendar.html" class="olink">Calendar</a>
-      <a href="world.html" class="olink">World Clock</a>
-      <a href="timer.html" class="olink">Timer</a>
-      <a href="stopwatch.html" class="olink">Stopwatch</a>
-      <a href="countdown.html" class="olink">Countdown</a>
-      <a href="alarm.html" class="olink">Alarm</a>
-      <a href="focus.html" class="olink">Focus</a>
-    </div>
-    <nav class="nav">
-      <div class="overflowm shoot" id="overflowm">
-        <img src="bars-solid.svg" alt="Menu" class="shoot">
-      </div>
-      <a href="/mactime/" class="logo">
-        <img src="mactime-logo.png" alt="MacTime Logo" />
-      </a>
-      <a href="calendar.html" class="link">Calendar</a>
-      <a href="world.html" class="link">World Clock</a>
-      <a href="timer.html" class="link">Timer</a>
-      <a href="stopwatch.html" class="link">Stopwatch</a>
-      <a href="countdown.html" class="link">Countdown</a>
-      <a href="alarm.html" class="link">Alarm</a>
-      <a href="focus.html" class="link">Focus</a>
-      <div class="select secondselect">
-        <span id="header123">Tabs</span>
-        <ul id="cats">
-          <a href="calendar.html">Calendar</a>
-          <a href="world.html">World Clock</a>
-          <a href="timer.html">Timer</a>
-          <a href="stopwatch.html">Stopwatch</a>
-          <a href="countdown.html">Countdown</a>
-          <a href="alarm.html">Alarm</a>
-          <a href="focus.html">Focus</a>
-        </ul>
-      </div>
-      <div class="select">
-        <span id="header123">Help</span>
-        <ul id="cats">
-          <a href="/macblog/projects/mactime/">About</a>
-          <a href="/macblog/updates/mactime/">Updates</a>
-          <a href="/macblog/projects/mactime/">Docs</a>
-          <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank"
-            >Feedback</a
-          >
-        </ul>
-      </div>
-    </nav>
     <div class="macsidebar" id="sidebar">
       <a href="/"><img src="/logo.png" alt="" /></a>
       <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
@@ -68,6 +18,51 @@
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <img src="mactime-logo.png" alt="MacTime Logo" />
+      </a>
+      <a href="calendar.html" class="nav-link">Calendar</a>
+      <a href="time.html" class="nav-link">Time</a>
+      <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+      <a href="alarm.html" class="nav-link">Alarm</a>
+      <div class="right">
+        <div class="select help-menu tabs">
+          <span class="help-label help-menu">Tabs</span>
+          <img src="/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="cats help-menu">
+            <a href="calendar.html">Calendar</a>
+            <a href="time.html">Time</a>
+            <a href="timer.html">Timer</a>
+            <a href="stopwatch.html">Stopwatch</a>
+            <a href="countdown.html">Countdown</a>
+            <a href="alarm.html">Alarm</a>
+            <a href="focus.html">Focus</a>
+          </ul>
+        </div>
+        <div class="tools select help-menu">
+          <span class="help-label help-menu">Tools</span>
+          <img src="/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="cats help-menu">
+            <a href="timer.html">Timer</a>
+            <a href="countdown.html">Countdown</a>
+          </ul>
+        </div>
+        <div class="select help-menu">
+          <span class="help-label help-menu">Help</span>
+          <img src="/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="cats help-menu">
+            <a href="/macblog/projects/mactime/">About</a>
+            <a href="/macblog/updates/mactime/">Updates</a>
+            <a href="/macblog/projects/mactime/">Docs</a>
+            <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank">
+              Feedback
+            </a>
+          </ul>
+        </div>
+        <img src="/profile.svg" class="profile" id="profile" />
+      </div>
+    </nav>
     <div class="wrap">
       <div class="time" style="display: flex; align-items: center">
         <div id="hour"></div>
@@ -82,8 +77,8 @@
           <option value="7">07</option>
           <option value="8">08</option>
           <option value="9">09</option>
-          <option value="10">10</option>
-        </select><span class="pos">m</span>
+          <option value="10">10</option></select
+        ><span class="pos">m</span>
         :
         <div id="minute"></div>
         <select name="minutes" id="minutes">
@@ -98,14 +93,20 @@
           <option value="40">40</option>
           <option value="45">45</option>
           <option value="50">50</option>
-          <option value="55">55</option>
-        </select><span class="pos">s</span>
+          <option value="55">55</option></select
+        ><span class="pos">s</span>
       </div>
       <div class="lcontain">
-        <div id="line"></div>        
+        <div id="line"></div>
       </div>
-      <button id="start">Start</button>
+      <button class="btn" id="start">Start</button>
     </div>
-    <audio src="notif.mp3" style="display: none;" id="notif"></audio>
+    <div class="toggle">
+      <div class="slider" id="slider">
+        <div id="slider-circle"></div>
+      </div>
+      <div class="toggle-label">Focus Mode</div>
+    </div>
+    <audio src="notif.mp3" style="display: none" id="notif"></audio>
   </body>
 </html>
