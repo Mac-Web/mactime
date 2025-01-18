@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="UWHTkMxkkqv0hsUJcBHWc3ZjLXysHyydwRcO67gs_tk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">Text Encoder | MacTools</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactools/"><img src="/MacTools Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <nav class="nav">
+      <a href="/mactools/" class="logo">
+        <img src="/mactools/mactools-logo.png" alt="MacTools Logo" />
+      </a>
+      <a href="/mactools/tools.html" class="nav-link">Tools</a>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Math</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/math/algebra.html">Algebra</a>
+          <a href="/mactools/math/converter.html">Converter</a>
+          <a href="/mactools/math/geometry.html">Geometry</a>
+          <a href="/mactools/math/sequence.html">Sequence</a>
+        </ul>
+      </div>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Text</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+            <a href="/mactools/text/decoder.html">Decoder</a>
+          <a href="/mactools/text/encoder.html">Encoder</a>
+          <a href="/mactools/text/format.html">Formatter</a>
+        </ul>
+      </div>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Time</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/time/alarm.html">Alarm</a>
+          <a href="/mactools/time/countdown.html">Countdown</a>
+          <a href="/mactools/time/stopwatch.html">Stopwatch</a>
+          <a href="/mactools/time/time.html">Time</a>
+          <a href="/mactools/time/timer.html">Timer</a>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="select help-menu">
+          <span class="help-label help-menu">Help</span>
+          <img src="/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="cats help-menu">
+            <a href="/macblog/apps/mactools/">About</a>
+            <a href="/macblog/updates/mactools/">Updates</a>
+            <a href="/macblog/apps/mactools/">Docs</a>
+            <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank">Feedback</a>
+          </ul>
+        </div>
+        <img src="/profile.svg" class="profile" id="profile" />
+      </div>
+    </nav>
+    <div class="wrap">
+      <div class="hero">
+        <h1 class="hero-title">Text Encoder</h1>
+        <p class="hero-des">A text tool for encoding text in different ciphers (codes) like Atbash, Caesar, and Vigenere ciphers.</p>
+      </div>
+      <form class="input-form" id="input-form">
+        <div class="inputs" id="input-field">
+          <select id="mode" class="input">
+            <option disabled selected>Select a cipher</option>
+            <option value="atbash">Atbash</option>
+            <option value="caesar">Caesar</option>
+            <option value="vigenere">Vigenere</option>
+          </select>
+          <div id="user-input"></div>
+          <input type="text" id="text" class="input" style="flex: 2.5" autocomplete="off" placeholder="Enter text here" />
+        </div>
+        <button class="btn" id="action" type="submit">Go</button>
+      </form>
+      <div class="input-form" id="result-container">
+        <div id="result"></div>
+        <button class="btn" onclick="copy()" id="copy-btn">Copy</button>
+      </div>
+    </div>
+    <script src="encoder.js"></script>
+    <script src="global.js"></script>
+  </body>
+</html>

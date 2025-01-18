@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="UWHTkMxkkqv0hsUJcBHWc3ZjLXysHyydwRcO67gs_tk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">Geometry Formulas Calculator | MacTools</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="macsidebar" id="sidebar">
+      <a href="/"><img src="/logo.png" alt="" /></a>
+      <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
+      <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
+      <a href="/mactools/"><img src="/MacTools Logo.png" alt="" /></a>
+      <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
+      <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
+    </div>
+    <nav class="nav">
+      <a href="/mactools/" class="logo">
+        <img src="/mactools/mactools-logo.png" alt="MacTools Logo" />
+      </a>
+      <a href="/mactools/tools.html" class="nav-link">Tools</a>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Math</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/math/algebra.html">Algebra</a>
+          <a href="/mactools/math/converter.html">Converter</a>
+          <a href="/mactools/math/geometry.html">Geometry</a>
+          <a href="/mactools/math/sequence.html">Sequence</a>
+        </ul>
+      </div>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Text</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+            <a href="/mactools/text/decoder.html">Decoder</a>
+          <a href="/mactools/text/encoder.html">Encoder</a>
+          <a href="/mactools/text/format.html">Formatter</a>
+        </ul>
+      </div>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Time</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/time/alarm.html">Alarm</a>
+          <a href="/mactools/time/countdown.html">Countdown</a>
+          <a href="/mactools/time/stopwatch.html">Stopwatch</a>
+          <a href="/mactools/time/time.html">Time</a>
+          <a href="/mactools/time/timer.html">Timer</a>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="select help-menu">
+          <span class="help-label help-menu">Help</span>
+          <img src="/caret.svg" class="caret help-menu" id="caret" />
+          <ul id="cats" class="cats help-menu">
+            <a href="/macblog/apps/mactools/">About</a>
+            <a href="/macblog/updates/mactools/">Updates</a>
+            <a href="/macblog/apps/mactools/">Docs</a>
+            <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank">Feedback</a>
+          </ul>
+        </div>
+        <img src="/profile.svg" class="profile" id="profile" />
+      </div>
+    </nav>
+    <div class="wrap">
+      <div class="hero">
+        <h1 class="hero-title">Geometry Formulas Calculator</h1>
+        <p class="hero-des">
+          A calculator tool for all common math formulas and functions from geometry like area, volume, pythagorean theorem, and
+          more.
+        </p>
+      </div>
+      <form class="input-form" id="input-form">
+        <div class="inputs" id="input-field">
+          <select id="category" class="input">
+            <option disabled selected>Select a category</option>
+            <option value="area">Area</option>
+            <option value="circ">Circumference / Perimeter</option>
+            <!--<option value="surf">Surface Area</option>
+            <option value="volu">Volume</option>
+            <option value="othe">Other</option>-->
+          </select>
+          <select id="area" class="input formulas">
+            <option disabled selected>Select a shape</option>
+            <option value="circ">Circle</option>
+            <option value="para">Parallelogram</option>
+            <option value="rect">Rectangle</option>
+            <option value="rhom">Rhombus</option>
+            <option value="squa">Square</option>
+            <option value="trap">Trapezoid</option>
+            <option value="tria">Triangle</option>
+          </select>
+          <select id="circ" class="input formulas">
+            <option disabled selected>Select a shape</option>
+            <option value="circ">Circle</option>
+            <option value="rect">Rectangle</option>
+          </select>
+          <!--
+          <select id="surf" class="input formulas">
+            <option disabled selected>Select a shape</option>
+            <option value="cyli">Cylinder</option>
+            <option value="pyra">Pyramid</option>
+            <option value="rect">Rectangular Prism</option>
+            <option value="sphe">Sphere</option>
+          </select>
+          <select id="volu" class="input formulas">
+            <option disabled selected>Select a shape</option>
+            <option value="cyli">Cylinder</option>
+            <option value="pyra">Pyramid</option>
+            <option value="rect">Rectangular Prism</option>
+            <option value="sphe">Sphere</option>
+          </select>
+          <select id="othe" class="input formulas">
+            <option disabled selected>Select an item</option>
+            <option value="pyth">Pythagorean Theorem</option>
+          </select>-->
+          <div id="user-inputs" style="display: none; flex: 1"></div>
+        </div>
+        <button class="btn" id="action" type="submit">Go</button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <script src="geometry.js"></script>
+    <script src="global.js"></script>
+  </body>
+</html>

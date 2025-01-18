@@ -2,17 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="google-site-verification"
-      content="UWHTkMxkkqv0hsUJcBHWc3ZjLXysHyydwRcO67gs_tk"
-    />
+    <meta name="google-site-verification" content="UWHTkMxkkqv0hsUJcBHWc3ZjLXysHyydwRcO67gs_tk" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title">Home | MacTime</title>
+    <title id="title">Home | MacTools</title>
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
     <script src="global.js"></script>
-    <style>
+    <!--<style>
       .wrap {
         display: flex;
         width: 100%;
@@ -96,57 +93,61 @@
           height: 30vh !important;
         }
       }
-    </style>
+    </style>-->
   </head>
   <body>
     <div class="macsidebar" id="sidebar">
       <a href="/"><img src="/logo.png" alt="" /></a>
       <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
       <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
-      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/mactools/"><img src="/MacTools Logo.png" alt="" /></a>
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <a href="index.html" class="logo">
-        <img src="mactime-logo.png" alt="MacTime Logo" />
+      <a href="/mactools/" class="logo">
+        <img src="/mactools/mactools-logo.png" alt="MacTools Logo" />
       </a>
-      <a href="calendar.html" class="nav-link">Calendar</a>
-      <a href="time.html" class="nav-link">Time</a>
-      <a href="stopwatch.html" class="nav-link">Stopwatch</a>
-      <a href="alarm.html" class="nav-link">Alarm</a>
+      <a href="/mactools/tools.html" class="nav-link">Tools</a>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Math</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/math/algebra.html">Algebra</a>
+          <a href="/mactools/math/converter.html">Converter</a>
+          <a href="/mactools/math/geometry.html">Geometry</a>
+          <a href="/mactools/math/sequence.html">Sequence</a>
+        </ul>
+      </div>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Text</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/text/decoder.html">Decoder</a>
+          <a href="/mactools/text/encoder.html">Encoder</a>
+          <a href="/mactools/text/format.html">Formatter</a>
+        </ul>
+      </div>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Time</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/time/alarm.html">Alarm</a>
+          <a href="/mactools/time/countdown.html">Countdown</a>
+          <a href="/mactools/time/stopwatch.html">Stopwatch</a>
+          <a href="/mactools/time/time.html">Time</a>
+          <a href="/mactools/time/timer.html">Timer</a>
+        </ul>
+      </div>
       <div class="right">
-        <div class="select help-menu tabs">
-          <span class="help-label help-menu">Tabs</span>
-          <img src="/caret.svg" class="caret help-menu" id="caret" />
-          <ul id="cats" class="cats help-menu">
-            <a href="calendar.html">Calendar</a>
-            <a href="time.html">Time</a>
-            <a href="timer.html">Timer</a>
-            <a href="stopwatch.html">Stopwatch</a>
-            <a href="countdown.html">Countdown</a>
-            <a href="alarm.html">Alarm</a>
-            <a href="focus.html">Focus</a>
-          </ul>
-        </div>
-        <div class="tools select help-menu">
-          <span class="help-label help-menu">Tools</span>
-          <img src="/caret.svg" class="caret help-menu" id="caret" />
-          <ul id="cats" class="cats help-menu">
-            <a href="timer.html">Timer</a>
-            <a href="countdown.html">Countdown</a>
-          </ul>
-        </div>
         <div class="select help-menu">
           <span class="help-label help-menu">Help</span>
           <img src="/caret.svg" class="caret help-menu" id="caret" />
           <ul id="cats" class="cats help-menu">
-            <a href="/macblog/projects/mactime/">About</a>
-            <a href="/macblog/updates/mactime/">Updates</a>
-            <a href="/macblog/projects/mactime/">Docs</a>
-            <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank">
-              Feedback
-            </a>
+            <a href="/macblog/apps/mactools/">About</a>
+            <a href="/macblog/updates/mactools/">Updates</a>
+            <a href="/macblog/apps/mactools/">Docs</a>
+            <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank">Feedback</a>
           </ul>
         </div>
         <img src="/profile.svg" class="profile" id="profile" />
@@ -154,139 +155,81 @@
     </nav>
     <div class="modal-background">
       <div class="modal">
-        <h2 class="modal-title">MacTime November Update</h2>
+        <h2 class="modal-title">MacTools Winter Update</h2>
         <img src="update.png" class="modal-img" />
         <p class="modal-des">
-          With huge changes, new appearance, new features, and more, the MacTime
-          November Update is here!
+          RENAMED APP, tons of new utilities, new features, new appearance, and more! Check out the MacTools 2025 Winter Update!
         </p>
-        <a
-          href="/macblog/updates/mactime/2024/november.html"
-          class="modal-link"
-          target="_blank"
-        >
-          What's new
-        </a>
+        <a href="/macblog/updates/mactools/2025/winter.html" class="modal-link" target="_blank"> What's new </a>
       </div>
     </div>
     <script>
       let updateModal = document.querySelector(".modal-background");
-      if (localStorage.mactimemodal) {
+      if (localStorage.mactoolsmodall) {
         updateModal.style.display = "none";
       }
     </script>
     <div class="wrap">
+      <div class="hero">
+        <h1 class="hero-title">Welcome to MacTools!</h1>
+        <p class="hero-des">The most powerful utilities right at your fingertips.</p>
+      </div>
+      <div class="apps">
+        <a href="tools.html" class="app">
+          <p class="text">Tools</p>
+        </a>
+        <a href="math/geometry.html" class="app">
+          <p class="text">Geometry Calculator</p>
+        </a>
+        <a href="text/decoder.html" class="app">
+          <p class="text">Text Decoder</p>
+        </a>
+        <a href="time/countdown.html" class="app">
+          <p class="text">Countdown</p>
+        </a>
+        <a href="time/timer.html" class="app">
+          <p class="text">Timer</p>
+        </a>
+      </div>
+      <!--
       <div class="panel" id="panel">
-        <iframe
-          src="clean/alarm.html"
-          frameborder="0"
-          class="frame"
-          id="alarmf"
-        ></iframe>
-        <iframe
-          src="clean/calendar.html"
-          frameborder="0"
-          class="frame"
-          id="calendarrf"
-        ></iframe>
-        <iframe
-          src="clean/countdown.html"
-          frameborder="0"
-          class="frame"
-          id="countdownf"
-        ></iframe>
-        <iframe
-          src="clean/focus.html"
-          frameborder="0"
-          class="frame"
-          id="focusf"
-        ></iframe>
-        <iframe
-          src="clean/stopwatch.html"
-          frameborder="0"
-          class="frame"
-          id="stopwatchf"
-        ></iframe>
-        <iframe
-          src="clean/timer.html"
-          frameborder="0"
-          class="frame"
-          id="timerf"
-        ></iframe>
-        <iframe
-          src="clean/world.html"
-          frameborder="0"
-          class="frame"
-          id="worldf"
-        ></iframe>
+        <iframe src="clean/alarm.html" frameborder="0" class="frame" id="alarmf"></iframe>
+        <iframe src="clean/calendar.html" frameborder="0" class="frame" id="calendarrf"></iframe>
+        <iframe src="clean/countdown.html" frameborder="0" class="frame" id="countdownf"></iframe>
+        <iframe src="clean/focus.html" frameborder="0" class="frame" id="focusf"></iframe>
+        <iframe src="clean/stopwatch.html" frameborder="0" class="frame" id="stopwatchf"></iframe>
+        <iframe src="clean/timer.html" frameborder="0" class="frame" id="timerf"></iframe>
+        <iframe src="clean/world.html" frameborder="0" class="frame" id="worldf"></iframe>
       </div>
       <div class="side">
         <h3>Choose which widgests to pin to the home page!</h3>
         <div class="boxes">
           <div class="box">
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="choose"
-              id="alarm"
-              value="alarm"
-            />
+            <input class="checkbox" type="checkbox" name="choose" id="alarm" value="alarm" />
             <label for="alarm">Alarm</label>
           </div>
           <div class="box">
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="choose"
-              id="calendarr"
-              value="calendarr"
-            />
+            <input class="checkbox" type="checkbox" name="choose" id="calendarr" value="calendarr" />
             <label for="calendarr">Calendar</label>
           </div>
           <div class="box">
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="choose"
-              id="countdown"
-              value="countdown"
-            />
+            <input class="checkbox" type="checkbox" name="choose" id="countdown" value="countdown" />
             <label for="countdown">Countdown</label>
           </div>
           <div class="box">
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="choose"
-              id="stopwatch"
-              value="stopwatch"
-            />
+            <input class="checkbox" type="checkbox" name="choose" id="stopwatch" value="stopwatch" />
             <label for="stopwatch">Stopwatch</label>
           </div>
           <div class="box">
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="choose"
-              id="timer"
-              value="timer"
-              checked="true"
-            />
+            <input class="checkbox" type="checkbox" name="choose" id="timer" value="timer" checked="true" />
             <label for="timer">Timer</label>
           </div>
           <div class="box">
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="choose"
-              id="world"
-              value="world"
-              checked="true"
-            />
+            <input class="checkbox" type="checkbox" name="choose" id="world" value="world" checked="true" />
             <label for="world">World Clock</label>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </body>
 </html>

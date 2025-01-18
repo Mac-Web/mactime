@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="title">Countdown | MacTime</title>
+    <title class="title">Countdown | MacTools</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <script src="countdown.js"></script>
@@ -15,50 +15,54 @@
       <a href="/"><img src="/logo.png" alt="" /></a>
       <a href="/macideas/"><img src="/MacIdeas Logo.png" alt="" /></a>
       <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
-      <a href="/mactime/"><img src="/MacTime Logo.png" alt="" /></a>
+      <a href="/mactools/"><img src="/MacTools Logo.png" alt="" /></a>
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
     <nav class="nav">
-      <a href="index.html" class="logo">
-        <img src="mactime-logo.png" alt="MacTime Logo" />
+      <a href="/mactools/" class="logo">
+        <img src="/mactools/mactools-logo.png" alt="MacTools Logo" />
       </a>
-      <a href="calendar.html" class="nav-link">Calendar</a>
-      <a href="time.html" class="nav-link">Time</a>
-      <a href="stopwatch.html" class="nav-link">Stopwatch</a>
-      <a href="alarm.html" class="nav-link">Alarm</a>
+      <a href="/mactools/tools.html" class="nav-link">Tools</a>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Math</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/math/algebra.html">Algebra</a>
+          <a href="/mactools/math/converter.html">Converter</a>
+          <a href="/mactools/math/geometry.html">Geometry</a>
+          <a href="/mactools/math/sequence.html">Sequence</a>
+        </ul>
+      </div>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Text</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+            <a href="/mactools/text/decoder.html">Decoder</a>
+          <a href="/mactools/text/encoder.html">Encoder</a>
+          <a href="/mactools/text/format.html">Formatter</a>
+        </ul>
+      </div>
+      <div class="tools select help-menu">
+        <span class="help-label help-menu">Time</span>
+        <img src="/caret.svg" class="caret help-menu" id="caret" />
+        <ul id="cats" class="cats help-menu">
+          <a href="/mactools/time/alarm.html">Alarm</a>
+          <a href="/mactools/time/countdown.html">Countdown</a>
+          <a href="/mactools/time/stopwatch.html">Stopwatch</a>
+          <a href="/mactools/time/time.html">Time</a>
+          <a href="/mactools/time/timer.html">Timer</a>
+        </ul>
+      </div>
       <div class="right">
-        <div class="select help-menu tabs">
-          <span class="help-label help-menu">Tabs</span>
-          <img src="/caret.svg" class="caret help-menu" id="caret" />
-          <ul id="cats" class="cats help-menu">
-            <a href="calendar.html">Calendar</a>
-            <a href="time.html">Time</a>
-            <a href="timer.html">Timer</a>
-            <a href="stopwatch.html">Stopwatch</a>
-            <a href="countdown.html">Countdown</a>
-            <a href="alarm.html">Alarm</a>
-            <a href="focus.html">Focus</a>
-          </ul>
-        </div>
-        <div class="tools select help-menu">
-          <span class="help-label help-menu">Tools</span>
-          <img src="/caret.svg" class="caret help-menu" id="caret" />
-          <ul id="cats" class="cats help-menu">
-            <a href="timer.html">Timer</a>
-            <a href="countdown.html">Countdown</a>
-          </ul>
-        </div>
         <div class="select help-menu">
           <span class="help-label help-menu">Help</span>
           <img src="/caret.svg" class="caret help-menu" id="caret" />
           <ul id="cats" class="cats help-menu">
-            <a href="/macblog/projects/mactime/">About</a>
-            <a href="/macblog/updates/mactime/">Updates</a>
-            <a href="/macblog/projects/mactime/">Docs</a>
-            <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank">
-              Feedback
-            </a>
+            <a href="/macblog/apps/mactools/">About</a>
+            <a href="/macblog/updates/mactools/">Updates</a>
+            <a href="/macblog/apps/mactools/">Docs</a>
+            <a href="https://forms.gle/dWn2LQ2Bdzn6GaLEA" target="_blank">Feedback</a>
           </ul>
         </div>
         <img src="/profile.svg" class="profile" id="profile" />
